@@ -1,0 +1,54 @@
+# configs/vit_config.yaml
+# 自己修改
+# --- Data Parameters ---
+data_params:
+  dataset: 'CIFAR10'
+  root_dir: './data' 
+  data_dir: './data/cifar10'
+  img_size: 32
+  patch_size: 4
+  in_channels: 3
+  num_classes: 10
+  # CIFAR-10 class names in order
+  class_names: 
+    - 'plane'
+    - 'car'
+    - 'bird'
+    - 'cat'
+    - 'deer'
+    - 'dog'
+    - 'frog'
+    - 'horse'
+    - 'ship'
+    - 'truck'
+  # Normalization constants for CIFAR-10
+  mean: [0.4914, 0.4822, 0.4465]
+  std: [0.2470, 0.2435, 0.2616]
+
+# --- Model Parameters ---
+model_params:
+  d_model: 512
+  num_layers: 6
+  n_heads: 8
+  d_ff: 2048
+  dropout: 0.1
+
+# --- Training Parameters ---
+training_params:
+  device: 'cuda' # 'cuda' or 'cpu'
+  num_epochs: 50
+  batch_size: 128
+  learning_rate: 0.001
+  weight_decay: 0.0001
+  eval_interval: 5
+  # Path where the trained model is saved and from where it is loaded
+  model_save_path: './checkpoints/vit_cifar10.pth'
+  num_workers: 1
+  scheduler_T_max: 50 
+
+# --- Prediction Parameters ---
+prediction_params:
+  # Can be a local file path or a web URL
+  # Example URL: "https://www.motortrend.com/uploads/2022/11/2024-Tesla-Cybertruck-exterior-view.jpg"
+  # Example local path: "./assets/my_car_image.jpg"
+  image_source: ""

@@ -1,0 +1,890 @@
+<?xml version="1.0" standalone="no"?>
+<!DOCTYPE entity PUBLIC "-//UC Berkeley//DTD MoML 1//EN"
+    "http://ptolemy.eecs.berkeley.edu/xml/dtd/MoML_1.dtd">
+<entity name="model" class="ptolemy.actor.TypedCompositeActor">
+    <property name="_createdBy" class="ptolemy.kernel.attributes.VersionAttribute" value="11.0.1">
+    </property>
+    <property name="_windowProperties" class="ptolemy.actor.gui.WindowPropertiesAttribute" value="{bounds={475, 293, 1432, 723}, maximized=false}">
+    </property>
+    <property name="_vergilSize" class="ptolemy.actor.gui.SizeAttribute" value="[1198, 576]">
+    </property>
+    <property name="_vergilZoomFactor" class="ptolemy.data.expr.ExpertParameter" value="1.359243434578186">
+    </property>
+    <property name="_vergilCenter" class="ptolemy.data.expr.ExpertParameter" value="{593.0078125, 350.3290588173401}">
+    </property>
+    <property name="enableBackwardTypeInference" class="ptolemy.data.expr.Parameter" value="false">
+    </property>
+    <property name="active" class="ptolemy.data.expr.Parameter" value="1">
+        <property name="_hideName" class="ptolemy.kernel.util.SingletonAttribute">
+        </property>
+        <property name="_icon" class="ptolemy.vergil.icon.ValueIcon">
+            <property name="_color" class="ptolemy.actor.gui.ColorAttribute" value="{0.0, 0.0, 1.0, 1.0}">
+            </property>
+        </property>
+        <property name="_smallIconDescription" class="ptolemy.kernel.util.SingletonConfigurableAttribute">
+            <configure>
+      <svg>
+        <text x="20" style="font-size:14; font-family:SansSerif; fill:blue" y="20">-P-</text>
+      </svg>
+    </configure>
+        </property>
+        <property name="_editorFactory" class="ptolemy.vergil.toolbox.VisibleParameterEditorFactory">
+        </property>
+        <property name="_location" class="ptolemy.kernel.util.Location" value="{290.0, 150.0}">
+        </property>
+    </property>
+    <property name="nonactive" class="ptolemy.data.expr.Parameter" value="0">
+        <property name="_hideName" class="ptolemy.kernel.util.SingletonAttribute">
+        </property>
+        <property name="_icon" class="ptolemy.vergil.icon.ValueIcon">
+            <property name="_color" class="ptolemy.actor.gui.ColorAttribute" value="{0.0, 0.0, 1.0, 1.0}">
+            </property>
+        </property>
+        <property name="_smallIconDescription" class="ptolemy.kernel.util.SingletonConfigurableAttribute">
+            <configure>
+      <svg>
+        <text x="20" style="font-size:14; font-family:SansSerif; fill:blue" y="20">-P-</text>
+      </svg>
+    </configure>
+        </property>
+        <property name="_editorFactory" class="ptolemy.vergil.toolbox.VisibleParameterEditorFactory">
+        </property>
+        <property name="_location" class="ptolemy.kernel.util.Location" value="{360.0, 150.0}">
+        </property>
+    </property>
+    <property name="walkTime" class="ptolemy.data.expr.Parameter" value="60">
+        <property name="_hideName" class="ptolemy.kernel.util.SingletonAttribute">
+        </property>
+        <property name="_icon" class="ptolemy.vergil.icon.ValueIcon">
+            <property name="_color" class="ptolemy.actor.gui.ColorAttribute" value="{0.0, 0.0, 1.0, 1.0}">
+            </property>
+        </property>
+        <property name="_smallIconDescription" class="ptolemy.kernel.util.SingletonConfigurableAttribute">
+            <configure>
+      <svg>
+        <text x="20" style="font-size:14; font-family:SansSerif; fill:blue" y="20">-P-</text>
+      </svg>
+    </configure>
+        </property>
+        <property name="_editorFactory" class="ptolemy.vergil.toolbox.VisibleParameterEditorFactory">
+        </property>
+        <property name="_location" class="ptolemy.kernel.util.Location" value="{455.0, 150.0}">
+        </property>
+    </property>
+    <property name="SDF Director" class="ptolemy.domains.sdf.kernel.SDFDirector">
+        <property name="iterations" class="ptolemy.data.expr.Parameter" value="UNBOUNDED">
+        </property>
+        <property name="_location" class="ptolemy.kernel.util.Location" value="{215.0, 170.0}">
+        </property>
+    </property>
+    <property name="_layoutConfiguration" class="ptolemy.vergil.basic.layout.ActorLayoutConfiguration">
+        <property name="interactionMode" class="ptolemy.data.expr.ChoiceParameter" value="None">
+            <display name="Interaction mode"/>
+        </property>
+    </property>
+    <entity name="CarLightESMActor" class="ptolemy.domains.modal.modal.ModalModel">
+        <property name="_tableauFactory" class="ptolemy.vergil.modal.modal.ModalTableauFactory">
+        </property>
+        <property name="_location" class="ptolemy.kernel.util.Location" value="{485.0, 260.0}">
+        </property>
+        <port name="pedestrian" class="ptolemy.domains.modal.modal.ModalPort">
+            <property name="input"/>
+            <property name="_showName" class="ptolemy.data.expr.SingletonParameter" value="true">
+            </property>
+        </port>
+        <port name="SigG" class="ptolemy.domains.modal.modal.ModalPort">
+            <property name="output"/>
+            <property name="_showName" class="ptolemy.data.expr.SingletonParameter" value="true">
+            </property>
+        </port>
+        <port name="SigY" class="ptolemy.domains.modal.modal.ModalPort">
+            <property name="output"/>
+            <property name="_showName" class="ptolemy.data.expr.SingletonParameter" value="true">
+            </property>
+        </port>
+        <port name="SigR" class="ptolemy.domains.modal.modal.ModalPort">
+            <property name="output"/>
+            <property name="_showName" class="ptolemy.data.expr.SingletonParameter" value="true">
+            </property>
+        </port>
+        <port name="count" class="ptolemy.domains.modal.modal.ModalPort">
+            <property name="input"/>
+            <property name="defaultValue" class="ptolemy.data.expr.Parameter">
+            </property>
+            <property name="_showName" class="ptolemy.data.expr.SingletonParameter" value="true">
+            </property>
+        </port>
+        <port name="reset" class="ptolemy.domains.modal.modal.ModalPort">
+            <property name="output"/>
+            <property name="defaultValue" class="ptolemy.data.expr.Parameter">
+            </property>
+            <property name="_showName" class="ptolemy.data.expr.SingletonParameter" value="true">
+            </property>
+        </port>
+        <entity name="_Controller" class="ptolemy.domains.modal.modal.ModalController">
+            <property name="_library" class="ptolemy.moml.LibraryAttribute">
+                <configure>
+      <entity name="state library" class="ptolemy.kernel.CompositeEntity"><input source="ptolemy/configs/basicUtilities.xml"></input><entity name="state" class="ptolemy.domains.modal.kernel.State"><property name="_centerName" class="ptolemy.kernel.util.Attribute"></property><property name="_controllerFactory" class="ptolemy.vergil.modal.modal.HierarchicalStateControllerFactory"></property></entity></entity>
+    </configure>
+            </property>
+            <property name="yellowTime" class="ptolemy.data.expr.Parameter" value="5">
+                <property name="_hideName" class="ptolemy.kernel.util.SingletonAttribute">
+                </property>
+                <property name="_icon" class="ptolemy.vergil.icon.ValueIcon">
+                    <property name="_color" class="ptolemy.actor.gui.ColorAttribute" value="{0.0, 0.0, 1.0, 1.0}">
+                    </property>
+                </property>
+                <property name="_smallIconDescription" class="ptolemy.kernel.util.SingletonConfigurableAttribute">
+                    <configure>
+      <svg>
+        <text x="20" style="font-size:14; font-family:SansSerif; fill:blue" y="20">-P-</text>
+      </svg>
+    </configure>
+                </property>
+                <property name="_editorFactory" class="ptolemy.vergil.toolbox.VisibleParameterEditorFactory">
+                </property>
+                <property name="_location" class="ptolemy.kernel.util.Location" value="{120.0, 20.0}">
+                </property>
+            </property>
+            <port name="pedestrian" class="ptolemy.domains.modal.modal.RefinementPort">
+                <property name="input"/>
+                <property name="defaultValue" class="ptolemy.data.expr.Parameter" value="">
+                </property>
+                <property name="_location" class="ptolemy.kernel.util.Location" value="[135.0, 395.0]">
+                </property>
+            </port>
+            <port name="SigG" class="ptolemy.domains.modal.modal.RefinementPort">
+                <property name="input"/>
+                <property name="output"/>
+                <property name="defaultValue" class="ptolemy.data.expr.Parameter" value="">
+                </property>
+                <property name="_location" class="ptolemy.kernel.util.Location" value="[785.0, 640.0]">
+                </property>
+            </port>
+            <port name="SigY" class="ptolemy.domains.modal.modal.RefinementPort">
+                <property name="input"/>
+                <property name="output"/>
+                <property name="defaultValue" class="ptolemy.data.expr.Parameter" value="">
+                </property>
+                <property name="_location" class="ptolemy.kernel.util.Location" value="[690.0, 640.0]">
+                </property>
+            </port>
+            <port name="SigR" class="ptolemy.domains.modal.modal.RefinementPort">
+                <property name="input"/>
+                <property name="output"/>
+                <property name="defaultValue" class="ptolemy.data.expr.Parameter" value="">
+                </property>
+                <property name="_location" class="ptolemy.kernel.util.Location" value="[740.0, 640.0]">
+                </property>
+            </port>
+            <port name="count" class="ptolemy.domains.modal.modal.RefinementPort">
+                <property name="input"/>
+                <property name="defaultValue" class="ptolemy.data.expr.Parameter" value="">
+                </property>
+                <property name="_location" class="ptolemy.kernel.util.Location" value="[135.0, 330.0]">
+                </property>
+            </port>
+            <port name="reset" class="ptolemy.domains.modal.modal.RefinementPort">
+                <property name="input"/>
+                <property name="output"/>
+                <property name="defaultValue" class="ptolemy.data.expr.Parameter" value="">
+                </property>
+                <property name="_location" class="ptolemy.kernel.util.Location" value="[645.0, 640.0]">
+                </property>
+            </port>
+            <entity name="Red" class="ptolemy.domains.modal.kernel.State">
+                <property name="isInitialState" class="ptolemy.data.expr.Parameter" value="true">
+                </property>
+                <property name="_hideName" class="ptolemy.data.expr.SingletonParameter" value="true">
+                </property>
+                <property name="_controllerFactory" class="ptolemy.vergil.modal.modal.HierarchicalStateControllerFactory">
+                </property>
+                <property name="_location" class="ptolemy.kernel.util.Location" value="{485.0, 45.0}">
+                </property>
+            </entity>
+            <entity name="Green" class="ptolemy.domains.modal.kernel.State">
+                <property name="isInitialState" class="ptolemy.data.expr.Parameter" value="false">
+                </property>
+                <property name="_hideName" class="ptolemy.data.expr.SingletonParameter" value="true">
+                </property>
+                <property name="_controllerFactory" class="ptolemy.vergil.modal.modal.HierarchicalStateControllerFactory">
+                </property>
+                <property name="_location" class="ptolemy.kernel.util.Location" value="{580.0, 240.0}">
+                </property>
+            </entity>
+            <entity name="Yellow" class="ptolemy.domains.modal.kernel.State">
+                <property name="isInitialState" class="ptolemy.data.expr.Parameter" value="false">
+                </property>
+                <property name="_hideName" class="ptolemy.data.expr.SingletonParameter" value="true">
+                </property>
+                <property name="_controllerFactory" class="ptolemy.vergil.modal.modal.HierarchicalStateControllerFactory">
+                </property>
+                <property name="_location" class="ptolemy.kernel.util.Location" value="{380.0, 630.0}">
+                </property>
+            </entity>
+            <entity name="Pending" class="ptolemy.domains.modal.kernel.State">
+                <property name="isInitialState" class="ptolemy.data.expr.Parameter" value="false">
+                </property>
+                <property name="_hideName" class="ptolemy.data.expr.SingletonParameter" value="true">
+                </property>
+                <property name="_controllerFactory" class="ptolemy.vergil.modal.modal.HierarchicalStateControllerFactory">
+                </property>
+                <property name="_location" class="ptolemy.kernel.util.Location" value="{780.0, 435.0}">
+                </property>
+            </entity>
+            <relation name="relation" class="ptolemy.domains.modal.kernel.Transition">
+                <property name="guardExpression" class="ptolemy.kernel.util.StringAttribute" value="count &lt; walkTime">
+                </property>
+                <property name="outputActions" class="ptolemy.domains.modal.kernel.OutputActionsAttribute" value="SigG = active;&#10;SigY = nonactive;&#10;SigR = nonactive;&#10;reset = false">
+                </property>
+                <property name="setActions" class="ptolemy.domains.modal.kernel.CommitActionsAttribute">
+                </property>
+                <property name="exitAngle" class="ptolemy.data.expr.Parameter" value="2.356194490192345">
+                </property>
+                <property name="gamma" class="ptolemy.data.expr.Parameter" value="-3.0429943768875787">
+                </property>
+                <property name="defaultTransition" class="ptolemy.data.expr.Parameter" value="true">
+                    <display name="default"/>
+                </property>
+                <property name="immediate" class="ptolemy.data.expr.Parameter" value="false">
+                </property>
+                <property name="preemptive" class="ptolemy.data.expr.Parameter" value="false">
+                </property>
+                <property name="_layoutHint" class="ptolemy.vergil.actor.LayoutHint" value="{ { head={id=&quot;Green._location&quot;,x=580.0,y=240.0}, tail={id=&quot;Green._location&quot;,x=580.0,y=240.0}, points={537.984375,235.5670623779297,535.8176879882812,237.7337188720703,535.8176879882812,239.900390625,535.8176879882812,242.0670623779297,537.984375,244.2337188720703}, labelLocation={x=420.0052185058594,y=208.9453125} } }">
+                </property>
+            </relation>
+            <relation name="relation2" class="ptolemy.domains.modal.kernel.Transition">
+                <property name="guardExpression" class="ptolemy.kernel.util.StringAttribute" value="count &gt;= walkTime">
+                </property>
+                <property name="outputActions" class="ptolemy.domains.modal.kernel.OutputActionsAttribute" value="SigG = active;&#10;SigY = nonactive;&#10;SigR = nonactive;&#10;reset = true">
+                </property>
+                <property name="setActions" class="ptolemy.domains.modal.kernel.CommitActionsAttribute">
+                </property>
+                <property name="exitAngle" class="ptolemy.data.expr.Parameter" value="-0.26967563604540606">
+                </property>
+                <property name="gamma" class="ptolemy.data.expr.Parameter" value="-0.4290729862398841">
+                </property>
+                <property name="defaultTransition" class="ptolemy.data.expr.Parameter" value="false">
+                    <display name="default"/>
+                </property>
+                <property name="_layoutHint" class="ptolemy.vergil.actor.LayoutHint" value="{ { head={id=&quot;Green._location&quot;,x=580.0,y=240.0}, tail={id=&quot;Red._location&quot;,x=485.0,y=45.0}, points={580.984375,208.9453125,580.984375,196.4453125,580.984375,184.2028045654297,580.984375,171.9602813720703,580.984375,159.9752655029297,580.984375,147.990234375,580.984375,136.0052032470703,580.984375,124.02017974853516,580.984375,115.11100006103516,580.984375,106.20182037353516,580.984375,100.36849212646484,566.486083984375,97.45182037353516,551.9878234863281,94.53515625,522.9913024902344,94.53515625,508.4930419921875,91.61849212646484,493.9947814941406,88.70182037353516,493.9947814941406,82.86849212646484,493.9947814941406,79.95182037353516,493.9947814941406,77.03515625,493.9947814941406,77.03515625}, labelLocation={x=584.984375,y=112.03515625} } }">
+                </property>
+            </relation>
+            <relation name="relation3" class="ptolemy.domains.modal.kernel.Transition">
+                <property name="guardExpression" class="ptolemy.kernel.util.StringAttribute" value="pedestrian % 60 == 0 &amp;&amp; count &lt; walkTime">
+                </property>
+                <property name="outputActions" class="ptolemy.domains.modal.kernel.OutputActionsAttribute" value="SigG = active;&#10;SigY = nonactive;&#10;SigR = nonactive;&#10;reset = false">
+                </property>
+                <property name="setActions" class="ptolemy.domains.modal.kernel.CommitActionsAttribute">
+                </property>
+                <property name="exitAngle" class="ptolemy.data.expr.Parameter" value="-0.41533311343765666">
+                </property>
+                <property name="gamma" class="ptolemy.data.expr.Parameter" value="0.31044651793983896">
+                </property>
+                <property name="defaultTransition" class="ptolemy.data.expr.Parameter" value="false">
+                    <display name="default"/>
+                </property>
+                <property name="_layoutHint" class="ptolemy.vergil.actor.LayoutHint" value="{ { head={id=&quot;Pending._location&quot;,x=780.0,y=435.0}, tail={id=&quot;Green._location&quot;,x=580.0,y=240.0}, points={780.5051879882812,402.890625,780.5051879882812,390.390625,780.5051879882812,378.1376953125,780.5051879882812,365.884765625,780.5051879882812,353.87890625,780.5051879882812,341.873046875,780.5051879882812,329.8671875,780.5051879882812,317.861328125,780.5051879882812,308.9417419433594,780.5051879882812,300.0221252441406,780.5051879882812,294.1888122558594,748.8072509765625,291.2721252441406,717.109375,288.35546875,653.7135009765625,288.35546875,622.0155944824219,285.4388122558594,590.3176879882812,282.5221252441406,590.3176879882812,276.6888122558594,590.3176879882812,273.7721252441406,590.3176879882812,270.85546875,590.3176879882812,270.85546875}, labelLocation={x=784.5051879882812,y=305.85546875} } }">
+                </property>
+            </relation>
+            <relation name="relation4" class="ptolemy.domains.modal.kernel.Transition">
+                <property name="guardExpression" class="ptolemy.kernel.util.StringAttribute" value="count &gt;= walkTime">
+                </property>
+                <property name="outputActions" class="ptolemy.domains.modal.kernel.OutputActionsAttribute" value="SigG = nonactive;&#10;SigY = active;&#10;SigR = nonactive;&#10;reset = true">
+                </property>
+                <property name="setActions" class="ptolemy.domains.modal.kernel.CommitActionsAttribute">
+                </property>
+                <property name="exitAngle" class="ptolemy.data.expr.Parameter" value="-0.40942581329705147">
+                </property>
+                <property name="gamma" class="ptolemy.data.expr.Parameter" value="2.710088027730564">
+                </property>
+                <property name="defaultTransition" class="ptolemy.data.expr.Parameter" value="false">
+                    <display name="default"/>
+                </property>
+                <property name="nondeterministic" class="ptolemy.data.expr.Parameter" value="false">
+                </property>
+                <property name="immediate" class="ptolemy.data.expr.Parameter" value="false">
+                </property>
+                <property name="_layoutHint" class="ptolemy.vergil.actor.LayoutHint" value="{ { head={id=&quot;Yellow._location&quot;,x=380.0,y=630.0}, tail={id=&quot;Pending._location&quot;,x=780.0,y=435.0}, points={397.4635314941406,596.8359375,397.4635314941406,596.8359375,397.4635314941406,593.9192504882812,397.4635314941406,591.0026245117188,397.4635314941406,585.1692504882812,461.3038024902344,582.2526245117188,525.1440734863281,579.3359375,652.8246459960938,579.3359375,716.6649169921875,576.4192504882812,780.5051879882812,573.5026245117188,780.5051879882812,567.6692504882812,780.5051879882812,557.5100708007812,780.5051879882812,547.3508911132812,780.5051879882812,532.8659057617188,780.5051879882812,518.380859375,780.5051879882812,503.8958435058594,780.5051879882812,489.4107971191406,780.5051879882812,479.6683044433594,780.5051879882812,469.92578125,780.5051879882812,464.92578125}, labelLocation={x=784.5051879882812,y=499.92578125} } }">
+                </property>
+            </relation>
+            <relation name="relation5" class="ptolemy.domains.modal.kernel.Transition">
+                <property name="guardExpression" class="ptolemy.kernel.util.StringAttribute" value="count &gt;= yellowTime">
+                </property>
+                <property name="outputActions" class="ptolemy.domains.modal.kernel.OutputActionsAttribute" value="SigG = nonactive;&#10;SigY = nonactive;&#10;SigR = active;&#10;reset = true">
+                </property>
+                <property name="setActions" class="ptolemy.domains.modal.kernel.CommitActionsAttribute">
+                </property>
+                <property name="exitAngle" class="ptolemy.data.expr.Parameter" value="-0.5037154343115">
+                </property>
+                <property name="gamma" class="ptolemy.data.expr.Parameter" value="-2.673308217082632">
+                </property>
+                <property name="defaultTransition" class="ptolemy.data.expr.Parameter" value="false">
+                    <display name="default"/>
+                </property>
+                <property name="_layoutHint" class="ptolemy.vergil.actor.LayoutHint" value="{ { head={id=&quot;Red._location&quot;,x=485.0,y=45.0}, tail={id=&quot;Yellow._location&quot;,x=380.0,y=630.0}, points={477.9947814941406,77.03515625,477.9947814941406,77.03515625,477.9947814941406,79.95182037353516,477.9947814941406,82.86849212646484,477.9947814941406,88.70182037353516,433.4513854980469,91.61849212646484,388.9079895019531,94.53515625,299.8211975097656,94.53515625,255.2777862548828,97.45182037353516,210.73439025878906,100.36849212646484,210.73439025878906,106.20182037353516,210.73439025878906,115.11100006103516,210.73439025878906,124.02017974853516,210.73439025878906,136.0052032470703,210.73439025878906,147.990234375,210.73439025878906,159.9752655029297,210.73439025878906,171.9602813720703,210.73439025878906,194.1044921875,210.73439025878906,216.2487030029297,210.73439025878906,248.5520782470703,210.73439025878906,272.7900390625,210.73439025878906,297.0279846191406,210.73439025878906,313.2005310058594,210.73439025878906,329.373046875,210.73439025878906,345.5455627441406,210.73439025878906,361.7181091308594,210.73439025878906,385.9768981933594,210.73439025878906,410.2356872558594,210.73439025878906,442.5807189941406,210.73439025878906,465.9957580566406,210.73439025878906,489.4107971191406,210.73439025878906,503.8958435058594,210.73439025878906,518.380859375,210.73439025878906,532.8659057617188,210.73439025878906,547.3508911132812,210.73439025878906,557.5100708007812,210.73439025878906,567.6692504882812,210.73439025878906,573.5026245117188,236.35591888427734,576.4192504882812,261.9774475097656,579.3359375,313.2204895019531,579.3359375,338.8420104980469,582.2526245117188,364.4635467529297,585.1692504882812,364.4635467529297,591.0026245117188,364.4635467529297,593.9192504882812,364.4635467529297,596.8359375,364.4635467529297,596.8359375}, labelLocation={x=214.73439025878906,y=305.91796875} } }">
+                </property>
+            </relation>
+            <relation name="relation6" class="ptolemy.domains.modal.kernel.Transition">
+                <property name="guardExpression" class="ptolemy.kernel.util.StringAttribute" value="pedestrian % 60 == 0 &amp;&amp; count &gt;= walkTime">
+                </property>
+                <property name="outputActions" class="ptolemy.domains.modal.kernel.OutputActionsAttribute" value="SigG = nonactive;&#10;SigY = active;&#10;SigR = nonactive;&#10;reset = true">
+                </property>
+                <property name="setActions" class="ptolemy.domains.modal.kernel.CommitActionsAttribute">
+                </property>
+                <property name="exitAngle" class="ptolemy.data.expr.Parameter" value="0.006616720115448605">
+                </property>
+                <property name="gamma" class="ptolemy.data.expr.Parameter" value="1.5956404257720982">
+                </property>
+                <property name="defaultTransition" class="ptolemy.data.expr.Parameter" value="false">
+                    <display name="default"/>
+                </property>
+                <property name="_layoutHint" class="ptolemy.vergil.actor.LayoutHint" value="{ { head={id=&quot;Yellow._location&quot;,x=380.0,y=630.0}, tail={id=&quot;Green._location&quot;,x=580.0,y=240.0}, points={380.9635314941406,596.8359375,380.9635314941406,584.3359375,380.9635314941406,570.0100708007812,380.9635314941406,555.6842651367188,380.9635314941406,539.5325317382812,380.9635314941406,523.380859375,380.9635314941406,507.2291564941406,380.9635314941406,491.0774841308594,380.9635314941406,466.8291015625,380.9635314941406,442.5807189941406,380.9635314941406,410.2356872558594,380.9635314941406,388.0602111816406,380.9635314941406,365.884765625,380.9635314941406,353.87890625,380.9635314941406,341.873046875,380.9635314941406,329.8671875,380.9635314941406,317.861328125,380.9635314941406,308.9417419433594,380.9635314941406,300.0221252441406,380.9635314941406,294.1888122558594,412.7447814941406,291.2721252441406,444.5260314941406,288.35546875,508.0885314941406,288.35546875,539.8697814941406,285.4388122558594,571.6510314941406,282.5221252441406,571.6510314941406,276.6888122558594,571.6510314941406,273.7721252441406,571.6510314941406,270.85546875,571.6510314941406,270.85546875}, labelLocation={x=384.9635314941406,y=402.890625} } }">
+                </property>
+            </relation>
+            <relation name="relation7" class="ptolemy.domains.modal.kernel.Transition">
+                <property name="outputActions" class="ptolemy.domains.modal.kernel.OutputActionsAttribute" value="SigG = nonactive;&#10;SigY = nonactive;&#10;SigR = active;&#10;reset = false">
+                </property>
+                <property name="setActions" class="ptolemy.domains.modal.kernel.CommitActionsAttribute">
+                </property>
+                <property name="exitAngle" class="ptolemy.data.expr.Parameter" value="2.389718181741612">
+                </property>
+                <property name="gamma" class="ptolemy.data.expr.Parameter" value="1.5614536623980764">
+                </property>
+                <property name="defaultTransition" class="ptolemy.data.expr.Parameter" value="true">
+                    <display name="default"/>
+                </property>
+                <property name="preemptive" class="ptolemy.data.expr.Parameter" value="false">
+                </property>
+                <property name="_layoutHint" class="ptolemy.vergil.actor.LayoutHint" value="{ { head={id=&quot;Red._location&quot;,x=485.0,y=45.0}, tail={id=&quot;Red._location&quot;,x=485.0,y=45.0}, points={446.9947814941406,50.68424606323242,444.6614685058594,48.35091018676758,444.6614685058594,46.017578125,444.6614685058594,43.68424606323242,446.9947814941406,41.35091018676758}, labelLocation={x=324.0989532470703,y=15.0} } }">
+                </property>
+            </relation>
+            <relation name="relation8" class="ptolemy.domains.modal.kernel.Transition">
+                <property name="outputActions" class="ptolemy.domains.modal.kernel.OutputActionsAttribute" value="SigG = active;&#10;SigY = nonactive;&#10;SigR = nonactive;&#10;reset = false">
+                </property>
+                <property name="setActions" class="ptolemy.domains.modal.kernel.CommitActionsAttribute">
+                </property>
+                <property name="exitAngle" class="ptolemy.data.expr.Parameter" value="2.2766327178510246">
+                </property>
+                <property name="gamma" class="ptolemy.data.expr.Parameter" value="-1.5694636825502688">
+                </property>
+                <property name="defaultTransition" class="ptolemy.data.expr.Parameter" value="true">
+                    <display name="default"/>
+                </property>
+                <property name="nondeterministic" class="ptolemy.data.expr.Parameter" value="false">
+                </property>
+                <property name="immediate" class="ptolemy.data.expr.Parameter" value="false">
+                </property>
+                <property name="preemptive" class="ptolemy.data.expr.Parameter" value="false">
+                </property>
+                <property name="_layoutHint" class="ptolemy.vergil.actor.LayoutHint" value="{ { head={id=&quot;Pending._location&quot;,x=780.0,y=435.0}, tail={id=&quot;Pending._location&quot;,x=780.0,y=435.0}, points={732.5051879882812,429.5748596191406,730.3385009765625,431.7415466308594,730.3385009765625,433.908203125,730.3385009765625,436.0748596191406,732.5051879882812,438.2415466308594}, labelLocation={x=627.7760009765625,y=402.890625} } }">
+                </property>
+            </relation>
+            <relation name="relation9" class="ptolemy.domains.modal.kernel.Transition">
+                <property name="outputActions" class="ptolemy.domains.modal.kernel.OutputActionsAttribute" value="SigG = nonactive;&#10;SigY = active;&#10;SigR = nonactive;&#10;reset = false">
+                </property>
+                <property name="setActions" class="ptolemy.domains.modal.kernel.CommitActionsAttribute">
+                </property>
+                <property name="exitAngle" class="ptolemy.data.expr.Parameter" value="2.3983171838308897">
+                </property>
+                <property name="gamma" class="ptolemy.data.expr.Parameter" value="-0.07599145950945797">
+                </property>
+                <property name="defaultTransition" class="ptolemy.data.expr.Parameter" value="true">
+                    <display name="default"/>
+                </property>
+                <property name="preemptive" class="ptolemy.data.expr.Parameter" value="false">
+                </property>
+                <property name="_layoutHint" class="ptolemy.vergil.actor.LayoutHint" value="{ { head={id=&quot;Yellow._location&quot;,x=380.0,y=630.0}, tail={id=&quot;Yellow._location&quot;,x=380.0,y=630.0}, points={332.9635467529297,623.5202026367188,330.796875,625.6868286132812,330.796875,627.853515625,330.796875,630.0202026367188,332.9635467529297,632.1868286132812}, labelLocation={x=210.234375,y=596.8359375} } }">
+                </property>
+            </relation>
+            <link port="Red.incomingPort" relation="relation5"/>
+            <link port="Red.incomingPort" relation="relation7"/>
+            <link port="Red.outgoingPort" relation="relation2"/>
+            <link port="Red.outgoingPort" relation="relation7"/>
+            <link port="Green.incomingPort" relation="relation"/>
+            <link port="Green.incomingPort" relation="relation2"/>
+            <link port="Green.outgoingPort" relation="relation"/>
+            <link port="Green.outgoingPort" relation="relation3"/>
+            <link port="Green.outgoingPort" relation="relation6"/>
+            <link port="Yellow.incomingPort" relation="relation4"/>
+            <link port="Yellow.incomingPort" relation="relation6"/>
+            <link port="Yellow.incomingPort" relation="relation9"/>
+            <link port="Yellow.outgoingPort" relation="relation5"/>
+            <link port="Yellow.outgoingPort" relation="relation9"/>
+            <link port="Pending.incomingPort" relation="relation3"/>
+            <link port="Pending.incomingPort" relation="relation8"/>
+            <link port="Pending.outgoingPort" relation="relation4"/>
+            <link port="Pending.outgoingPort" relation="relation8"/>
+        </entity>
+        <relation name="pedestrianRelation" class="ptolemy.actor.TypedIORelation">
+            <property name="width" class="ptolemy.data.expr.Parameter" value="Auto">
+            </property>
+        </relation>
+        <relation name="SigGRelation" class="ptolemy.actor.TypedIORelation">
+            <property name="width" class="ptolemy.data.expr.Parameter" value="Auto">
+            </property>
+        </relation>
+        <relation name="SigYRelation" class="ptolemy.actor.TypedIORelation">
+            <property name="width" class="ptolemy.data.expr.Parameter" value="Auto">
+            </property>
+        </relation>
+        <relation name="SigRRelation" class="ptolemy.actor.TypedIORelation">
+            <property name="width" class="ptolemy.data.expr.Parameter" value="Auto">
+            </property>
+        </relation>
+        <relation name="countRelation" class="ptolemy.actor.TypedIORelation">
+            <property name="width" class="ptolemy.data.expr.Parameter" value="Auto">
+            </property>
+        </relation>
+        <relation name="resetRelation" class="ptolemy.actor.TypedIORelation">
+            <property name="width" class="ptolemy.data.expr.Parameter" value="Auto">
+            </property>
+        </relation>
+        <link port="pedestrian" relation="pedestrianRelation"/>
+        <link port="SigG" relation="SigGRelation"/>
+        <link port="SigY" relation="SigYRelation"/>
+        <link port="SigR" relation="SigRRelation"/>
+        <link port="count" relation="countRelation"/>
+        <link port="reset" relation="resetRelation"/>
+        <link port="_Controller.pedestrian" relation="pedestrianRelation"/>
+        <link port="_Controller.SigG" relation="SigGRelation"/>
+        <link port="_Controller.SigY" relation="SigYRelation"/>
+        <link port="_Controller.SigR" relation="SigRRelation"/>
+        <link port="_Controller.count" relation="countRelation"/>
+        <link port="_Controller.reset" relation="resetRelation"/>
+    </entity>
+    <entity name="PedestrianLightESM" class="ptolemy.domains.modal.modal.ModalModel">
+        <property name="_tableauFactory" class="ptolemy.vergil.modal.modal.ModalTableauFactory">
+        </property>
+        <property name="_location" class="ptolemy.kernel.util.Location" value="{795.0, 420.0}">
+        </property>
+        <port name="carSigR" class="ptolemy.domains.modal.modal.ModalPort">
+            <property name="input"/>
+            <property name="_showName" class="ptolemy.data.expr.SingletonParameter" value="true">
+            </property>
+        </port>
+        <port name="walkSignal" class="ptolemy.domains.modal.modal.ModalPort">
+            <property name="output"/>
+            <property name="_showName" class="ptolemy.data.expr.SingletonParameter" value="true">
+            </property>
+        </port>
+        <port name="count" class="ptolemy.domains.modal.modal.ModalPort">
+            <property name="input"/>
+            <property name="defaultValue" class="ptolemy.data.expr.Parameter">
+            </property>
+            <property name="_showName" class="ptolemy.data.expr.SingletonParameter" value="true">
+            </property>
+        </port>
+        <entity name="_Controller" class="ptolemy.domains.modal.modal.ModalController">
+            <property name="_library" class="ptolemy.moml.LibraryAttribute">
+                <configure>
+      <entity name="state library" class="ptolemy.kernel.CompositeEntity"><input source="ptolemy/configs/basicUtilities.xml"></input><entity name="state" class="ptolemy.domains.modal.kernel.State"><property name="_centerName" class="ptolemy.kernel.util.Attribute"></property><property name="_controllerFactory" class="ptolemy.vergil.modal.modal.HierarchicalStateControllerFactory"></property></entity></entity>
+    </configure>
+            </property>
+            <property name="prohibitToWalk" class="ptolemy.data.expr.Parameter" value="0">
+                <property name="_hideName" class="ptolemy.kernel.util.SingletonAttribute">
+                </property>
+                <property name="_icon" class="ptolemy.vergil.icon.ValueIcon">
+                    <property name="_color" class="ptolemy.actor.gui.ColorAttribute" value="{0.0, 0.0, 1.0, 1.0}">
+                    </property>
+                </property>
+                <property name="_smallIconDescription" class="ptolemy.kernel.util.SingletonConfigurableAttribute">
+                    <configure>
+      <svg>
+        <text x="20" style="font-size:14; font-family:SansSerif; fill:blue" y="20">-P-</text>
+      </svg>
+    </configure>
+                </property>
+                <property name="_editorFactory" class="ptolemy.vergil.toolbox.VisibleParameterEditorFactory">
+                </property>
+                <property name="_location" class="ptolemy.kernel.util.Location" value="{210.0, 20.0}">
+                </property>
+            </property>
+            <property name="allowToWalk" class="ptolemy.data.expr.Parameter" value="1">
+                <property name="_hideName" class="ptolemy.kernel.util.SingletonAttribute">
+                </property>
+                <property name="_icon" class="ptolemy.vergil.icon.ValueIcon">
+                    <property name="_color" class="ptolemy.actor.gui.ColorAttribute" value="{0.0, 0.0, 1.0, 1.0}">
+                    </property>
+                </property>
+                <property name="_smallIconDescription" class="ptolemy.kernel.util.SingletonConfigurableAttribute">
+                    <configure>
+      <svg>
+        <text x="20" style="font-size:14; font-family:SansSerif; fill:blue" y="20">-P-</text>
+      </svg>
+    </configure>
+                </property>
+                <property name="_editorFactory" class="ptolemy.vergil.toolbox.VisibleParameterEditorFactory">
+                </property>
+                <property name="_location" class="ptolemy.kernel.util.Location" value="{105.0, 20.0}">
+                </property>
+            </property>
+            <property name="_windowProperties" class="ptolemy.actor.gui.WindowPropertiesAttribute" value="{bounds={763, 390, 1034, 659}, maximized=false}">
+            </property>
+            <property name="_vergilSize" class="ptolemy.actor.gui.SizeAttribute" value="[800, 512]">
+            </property>
+            <property name="_vergilZoomFactor" class="ptolemy.data.expr.ExpertParameter" value="1.4826908136668147">
+            </property>
+            <property name="_vergilCenter" class="ptolemy.data.expr.ExpertParameter" value="{308.40753173828125, 185.02118630711038}">
+            </property>
+            <port name="carSigR" class="ptolemy.domains.modal.modal.RefinementPort">
+                <property name="input"/>
+                <property name="defaultValue" class="ptolemy.data.expr.Parameter" value="">
+                </property>
+                <property name="_location" class="ptolemy.kernel.util.Location" value="[40.0, 135.0]">
+                </property>
+            </port>
+            <port name="walkSignal" class="ptolemy.domains.modal.modal.RefinementPort">
+                <property name="input"/>
+                <property name="output"/>
+                <property name="defaultValue" class="ptolemy.data.expr.Parameter" value="">
+                </property>
+                <property name="_location" class="ptolemy.kernel.util.Location" value="[480.0, 85.0]">
+                </property>
+            </port>
+            <port name="count" class="ptolemy.domains.modal.modal.RefinementPort">
+                <property name="input"/>
+                <property name="defaultValue" class="ptolemy.data.expr.Parameter" value="">
+                </property>
+                <property name="_location" class="ptolemy.kernel.util.Location" value="[45.0, 80.0]">
+                </property>
+            </port>
+            <entity name="Red" class="ptolemy.domains.modal.kernel.State">
+                <property name="isInitialState" class="ptolemy.data.expr.Parameter" value="false">
+                </property>
+                <property name="_hideName" class="ptolemy.data.expr.SingletonParameter" value="true">
+                </property>
+                <property name="_controllerFactory" class="ptolemy.vergil.modal.modal.HierarchicalStateControllerFactory">
+                </property>
+                <property name="_location" class="ptolemy.kernel.util.Location" value="{310.0, 205.0}">
+                </property>
+            </entity>
+            <entity name="Green" class="ptolemy.domains.modal.kernel.State">
+                <property name="isInitialState" class="ptolemy.data.expr.Parameter" value="true">
+                </property>
+                <property name="_hideName" class="ptolemy.data.expr.SingletonParameter" value="true">
+                </property>
+                <property name="_controllerFactory" class="ptolemy.vergil.modal.modal.HierarchicalStateControllerFactory">
+                </property>
+                <property name="_location" class="ptolemy.kernel.util.Location" value="{310.0, 75.0}">
+                </property>
+            </entity>
+            <relation name="relation" class="ptolemy.domains.modal.kernel.Transition">
+                <property name="guardExpression" class="ptolemy.kernel.util.StringAttribute" value=" carSigR == nonactive || count &gt;= walkTime">
+                </property>
+                <property name="outputActions" class="ptolemy.domains.modal.kernel.OutputActionsAttribute" value="walkSignal = prohibitToWalk">
+                </property>
+                <property name="setActions" class="ptolemy.domains.modal.kernel.CommitActionsAttribute">
+                </property>
+                <property name="exitAngle" class="ptolemy.data.expr.Parameter" value="0.6283185307179586">
+                </property>
+                <property name="gamma" class="ptolemy.data.expr.Parameter" value="0.0">
+                </property>
+                <property name="_layoutHint" class="ptolemy.vergil.actor.LayoutHint" value="{ { head={id=&quot;Red._location&quot;,x=310.0,y=205.0}, tail={id=&quot;Green._location&quot;,x=310.0,y=75.0}, points={304.1875,187.3811798095703,304.1875,187.3811798095703,304.1875,184.4645233154297,304.1875,181.5478515625,304.1875,175.7145233154297,283.14756774902344,172.7978515625,262.1076354980469,169.8811798095703,220.02777099609375,169.8811798095703,198.9878387451172,166.9645233154297,177.94790649414062,164.0478515625,177.94790649414062,158.2145233154297,177.94790649414062,153.377197265625,177.94790649414062,148.5398712158203,177.94790649414062,144.6985626220703,177.94790649414062,140.8572540283203,177.94790649414062,137.0159454345703,177.94790649414062,133.1746368408203,177.94790649414062,128.3373260498047,177.94790649414062,123.5,177.94790649414062,117.66666412353516,198.65451049804688,114.75,219.3611068725586,111.83333587646484,260.77430725097656,111.83333587646484,281.48089599609375,108.91666412353516,302.1875,106.0,302.1875,100.16666412353516,302.1875,97.25,302.1875,94.33333587646484,302.1875,94.33333587646484}, labelLocation={x=181.94790649414062,y=129.3333282470703} } }">
+                </property>
+            </relation>
+            <relation name="relation2" class="ptolemy.domains.modal.kernel.Transition">
+                <property name="guardExpression" class="ptolemy.kernel.util.StringAttribute" value="carSigR == active">
+                </property>
+                <property name="outputActions" class="ptolemy.domains.modal.kernel.OutputActionsAttribute" value="walkSignal = allowToWalk">
+                </property>
+                <property name="setActions" class="ptolemy.domains.modal.kernel.CommitActionsAttribute">
+                </property>
+                <property name="exitAngle" class="ptolemy.data.expr.Parameter" value="0.6283185307179586">
+                </property>
+                <property name="gamma" class="ptolemy.data.expr.Parameter" value="3.141592653589793">
+                </property>
+                <property name="_layoutHint" class="ptolemy.vergil.actor.LayoutHint" value="{ { head={id=&quot;Green._location&quot;,x=310.0,y=75.0}, tail={id=&quot;Red._location&quot;,x=310.0,y=205.0}, points={321.5208282470703,94.33333587646484,321.5208282470703,94.33333587646484,321.5208282470703,97.25,321.5208282470703,100.16666412353516,321.5208282470703,106.0,342.22743225097656,108.91666412353516,362.93402099609375,111.83333587646484,404.34722900390625,111.83333587646484,425.0538330078125,114.75,445.76043701171875,117.66666412353516,445.76043701171875,123.5,445.76043701171875,128.3373260498047,445.76043701171875,133.1746368408203,445.76043701171875,137.0159454345703,445.76043701171875,140.8572540283203,445.76043701171875,144.6985626220703,445.76043701171875,148.5398712158203,445.76043701171875,153.377197265625,445.76043701171875,158.2145233154297,445.76043701171875,164.0478515625,424.7204895019531,166.9645233154297,403.6805725097656,169.8811798095703,361.6007080078125,169.8811798095703,340.5607604980469,172.7978515625,319.5208282470703,175.7145233154297,319.5208282470703,181.5478515625,319.5208282470703,184.4645233154297,319.5208282470703,187.3811798095703,319.5208282470703,187.3811798095703}, labelLocation={x=449.76043701171875,y=129.3333282470703} } }">
+                </property>
+            </relation>
+            <relation name="relation3" class="ptolemy.domains.modal.kernel.Transition">
+                <property name="outputActions" class="ptolemy.domains.modal.kernel.OutputActionsAttribute" value="walkSignal = allowToWalk">
+                </property>
+                <property name="exitAngle" class="ptolemy.data.expr.Parameter" value="2.356194490192345">
+                </property>
+                <property name="gamma" class="ptolemy.data.expr.Parameter" value="-2.92979010498793">
+                </property>
+                <property name="defaultTransition" class="ptolemy.data.expr.Parameter" value="true">
+                    <display name="default"/>
+                </property>
+                <property name="_layoutHint" class="ptolemy.vergil.actor.LayoutHint" value="{ { head={id=&quot;Green._location&quot;,x=310.0,y=75.0}, tail={id=&quot;Green._location&quot;,x=310.0,y=75.0}, points={267.8541717529297,79.33333587646484,265.5208282470703,77.0,265.5208282470703,74.66666412353516,265.5208282470703,72.33333587646484,267.8541717529297,70.0}, labelLocation={x=105.88022327423096,y=69.97135162353516} } }">
+                </property>
+            </relation>
+            <relation name="relation4" class="ptolemy.domains.modal.kernel.Transition">
+                <property name="outputActions" class="ptolemy.domains.modal.kernel.OutputActionsAttribute" value="walkSignal = prohibitToWalk">
+                </property>
+                <property name="exitAngle" class="ptolemy.data.expr.Parameter" value="2.356194490192345">
+                </property>
+                <property name="gamma" class="ptolemy.data.expr.Parameter" value="0.7055533558822713">
+                </property>
+                <property name="defaultTransition" class="ptolemy.data.expr.Parameter" value="true">
+                    <display name="default"/>
+                </property>
+                <property name="_layoutHint" class="ptolemy.vergil.actor.LayoutHint" value="{ { head={id=&quot;Red._location&quot;,x=310.0,y=205.0}, tail={id=&quot;Red._location&quot;,x=310.0,y=205.0}, points={273.8541717529297,202.3811798095703,271.6875,204.5478515625,271.6875,206.7145233154297,271.6875,208.8811798095703,273.8541717529297,211.0478515625}, labelLocation={x=101.046875,y=202.0192108154297} } }">
+                </property>
+            </relation>
+            <link port="Red.incomingPort" relation="relation"/>
+            <link port="Red.incomingPort" relation="relation4"/>
+            <link port="Red.outgoingPort" relation="relation2"/>
+            <link port="Red.outgoingPort" relation="relation4"/>
+            <link port="Green.incomingPort" relation="relation2"/>
+            <link port="Green.incomingPort" relation="relation3"/>
+            <link port="Green.outgoingPort" relation="relation"/>
+            <link port="Green.outgoingPort" relation="relation3"/>
+        </entity>
+        <relation name="carSigRRelation" class="ptolemy.actor.TypedIORelation">
+            <property name="width" class="ptolemy.data.expr.Parameter" value="Auto">
+            </property>
+        </relation>
+        <relation name="walkSignalRelation" class="ptolemy.actor.TypedIORelation">
+            <property name="width" class="ptolemy.data.expr.Parameter" value="Auto">
+            </property>
+        </relation>
+        <relation name="countRelation" class="ptolemy.actor.TypedIORelation">
+            <property name="width" class="ptolemy.data.expr.Parameter" value="Auto">
+            </property>
+        </relation>
+        <link port="carSigR" relation="carSigRRelation"/>
+        <link port="walkSignal" relation="walkSignalRelation"/>
+        <link port="count" relation="countRelation"/>
+        <link port="_Controller.carSigR" relation="carSigRRelation"/>
+        <link port="_Controller.walkSignal" relation="walkSignalRelation"/>
+        <link port="_Controller.count" relation="countRelation"/>
+    </entity>
+    <entity name="CompositeActor" class="ptolemy.actor.TypedCompositeActor">
+        <property name="_location" class="ptolemy.kernel.util.Location" value="{260.0, 240.0}">
+        </property>
+        <property name="_windowProperties" class="ptolemy.actor.gui.WindowPropertiesAttribute" value="{bounds={813, 390, 934, 659}, maximized=false}">
+        </property>
+        <property name="_vergilSize" class="ptolemy.actor.gui.SizeAttribute" value="[700, 512]">
+        </property>
+        <property name="_vergilZoomFactor" class="ptolemy.data.expr.ExpertParameter" value="1.059958715376122">
+        </property>
+        <property name="_vergilCenter" class="ptolemy.data.expr.ExpertParameter" value="{354.84375, 553.9266757246377}">
+        </property>
+        <port name="CarReset" class="ptolemy.actor.TypedIOPort">
+            <property name="input"/>
+            <property name="defaultValue" class="ptolemy.data.expr.Parameter">
+            </property>
+            <property name="_showName" class="ptolemy.data.expr.SingletonParameter" value="true">
+            </property>
+            <property name="_location" class="ptolemy.kernel.util.Location" value="{165.0, 580.0}">
+            </property>
+        </port>
+        <port name="CarCount" class="ptolemy.actor.TypedIOPort">
+            <property name="output"/>
+            <property name="defaultValue" class="ptolemy.data.expr.Parameter">
+            </property>
+            <property name="_showName" class="ptolemy.data.expr.SingletonParameter" value="true">
+            </property>
+            <property name="_location" class="ptolemy.kernel.util.Location" value="{530.0, 510.0}">
+            </property>
+        </port>
+        <port name="Pedestrian" class="ptolemy.actor.TypedIOPort">
+            <property name="output"/>
+            <property name="defaultValue" class="ptolemy.data.expr.Parameter">
+            </property>
+            <property name="_showName" class="ptolemy.data.expr.SingletonParameter" value="true">
+            </property>
+            <property name="_location" class="ptolemy.kernel.util.Location" value="{255.0, 445.0}">
+            </property>
+        </port>
+        <entity name="CarCounter" class="ptolemy.actor.lib.Counter">
+            <property name="_location" class="ptolemy.kernel.util.Location" value="{315.0, 510.0}">
+            </property>
+        </entity>
+        <entity name="Ramp" class="ptolemy.actor.lib.Ramp">
+            <property name="step" class="ptolemy.actor.parameters.PortParameter" value="1">
+            </property>
+            <doc>Create a sequence of tokens with increasing value</doc>
+            <property name="_location" class="ptolemy.kernel.util.Location" value="{90.0, 500.0}">
+            </property>
+        </entity>
+        <entity name="CarCountDelay" class="ptolemy.domains.sdf.lib.SampleDelay">
+            <property name="initialOutputs" class="ptolemy.data.expr.Parameter" value="{1}">
+            </property>
+            <property name="displayWidth" class="ptolemy.data.expr.Parameter" value="20">
+            </property>
+            <property name="_icon" class="ptolemy.vergil.icon.BoxedValueIcon">
+                <property name="attributeName" class="ptolemy.kernel.util.StringAttribute" value="initialOutputs">
+                </property>
+                <property name="displayWidth" class="ptolemy.data.expr.Parameter" value="displayWidth">
+                </property>
+            </property>
+            <property name="_location" class="ptolemy.kernel.util.Location" value="{420.0, 510.0}">
+            </property>
+        </entity>
+        <relation name="relation3" class="ptolemy.actor.TypedIORelation">
+            <property name="_layoutHint" class="ptolemy.vergil.actor.LayoutHint" value="{ { head={id=&quot;CarCounter.reset&quot;,x=315.0,y=510.0}, tail={id=&quot;CarReset._location&quot;,x=165.0,y=580.0}, points={315.0,580.0} } }">
+            </property>
+        </relation>
+        <relation name="relation5" class="ptolemy.actor.TypedIORelation">
+            <vertex name="vertex1" value="{220.0, 500.0}">
+            </vertex>
+            <property name="_layoutHint" class="ptolemy.vergil.actor.LayoutHint" value="{ { head={id=&quot;CarCounter.increment&quot;,x=315.0,y=510.0}, tail={id=&quot;relation5.vertex1&quot;,x=220.0,y=500.0}, points={} },{ head={id=&quot;.PedestrianCounter.increment&quot;,x=355.0,y=350.0}, tail={id=&quot;relation5.vertex1&quot;,x=260.0,y=500.0}, points={260.0,340.0} },{ head={id=&quot;Pedestrian._location&quot;,x=255.0,y=445.0}, tail={id=&quot;relation5.vertex1&quot;,x=220.0,y=500.0}, points={220.0,445.0} },{ head={id=&quot;Ramp.output&quot;,x=90.0,y=500.0}, tail={id=&quot;relation5.vertex1&quot;,x=220.0,y=500.0}, points={} } }">
+            </property>
+        </relation>
+        <relation name="relation" class="ptolemy.actor.TypedIORelation">
+            <property name="_layoutHint" class="ptolemy.vergil.actor.LayoutHint" value="{ { head={id=&quot;CarCountDelay.input&quot;,x=420.0,y=510.0}, tail={id=&quot;CarCounter.output&quot;,x=315.0,y=510.0}, points={} } }">
+            </property>
+        </relation>
+        <relation name="relation7" class="ptolemy.actor.TypedIORelation">
+            <property name="_layoutHint" class="ptolemy.vergil.actor.LayoutHint" value="{ { head={id=&quot;CarCount._location&quot;,x=530.0,y=510.0}, tail={id=&quot;CarCountDelay.output&quot;,x=420.0,y=510.0}, points={} } }">
+            </property>
+        </relation>
+        <link port="CarReset" relation="relation3"/>
+        <link port="CarCount" relation="relation7"/>
+        <link port="Pedestrian" relation="relation5"/>
+        <link port="CarCounter.increment" relation="relation5"/>
+        <link port="CarCounter.output" relation="relation"/>
+        <link port="CarCounter.reset" relation="relation3"/>
+        <link port="Ramp.output" relation="relation5"/>
+        <link port="CarCountDelay.input" relation="relation"/>
+        <link port="CarCountDelay.output" relation="relation7"/>
+    </entity>
+    <entity name="SigGPlotter" class="ptolemy.actor.lib.gui.SequencePlotter">
+        <property name="_windowProperties" class="ptolemy.actor.gui.WindowPropertiesAttribute" value="{bounds={-3, 18, 886, 534}, maximized=false}">
+        </property>
+        <property name="_plotSize" class="ptolemy.actor.gui.SizeAttribute" value="[864, 447]">
+        </property>
+        <property name="_location" class="ptolemy.kernel.util.Location" value="{655.0, 240.0}">
+        </property>
+        <configure>
+<?plotml <!DOCTYPE plot PUBLIC "-//UC Berkeley//DTD PlotML 1//EN"
+"http://ptolemy.eecs.berkeley.edu/xml/dtd/PlotML_1.dtd">
+<plot>
+<title>SigGPlotter</title>
+<xLabel></xLabel>
+<yLabel></yLabel>
+<xRange min="0.0" max="360.0"/>
+<yRange min="0.0" max="1.0"/>
+</plot>?>
+        </configure>
+    </entity>
+    <entity name="SigRPlotter" class="ptolemy.actor.lib.gui.SequencePlotter">
+        <property name="_windowProperties" class="ptolemy.actor.gui.WindowPropertiesAttribute" value="{bounds={-14, 947, 882, 457}, maximized=false}">
+        </property>
+        <property name="_plotSize" class="ptolemy.actor.gui.SizeAttribute" value="[860, 370]">
+        </property>
+        <property name="_location" class="ptolemy.kernel.util.Location" value="{760.0, 350.0}">
+        </property>
+        <configure>
+<?plotml <!DOCTYPE plot PUBLIC "-//UC Berkeley//DTD PlotML 1//EN"
+"http://ptolemy.eecs.berkeley.edu/xml/dtd/PlotML_1.dtd">
+<plot>
+<title>SigRPlotter</title>
+<xLabel></xLabel>
+<yLabel></yLabel>
+<xRange min="0.0" max="360.0"/>
+<yRange min="0.0" max="1.0"/>
+</plot>?>
+        </configure>
+    </entity>
+    <entity name="SigYPlotter" class="ptolemy.actor.lib.gui.SequencePlotter">
+        <property name="_windowProperties" class="ptolemy.actor.gui.WindowPropertiesAttribute" value="{bounds={-7, 519, 888, 467}, maximized=false}">
+        </property>
+        <property name="_plotSize" class="ptolemy.actor.gui.SizeAttribute" value="[866, 380]">
+        </property>
+        <property name="_location" class="ptolemy.kernel.util.Location" value="{655.0, 310.0}">
+        </property>
+        <configure>
+<?plotml <!DOCTYPE plot PUBLIC "-//UC Berkeley//DTD PlotML 1//EN"
+"http://ptolemy.eecs.berkeley.edu/xml/dtd/PlotML_1.dtd">
+<plot>
+<title>SigYPlotter</title>
+<xLabel></xLabel>
+<yLabel></yLabel>
+<xRange min="0.0" max="360.0"/>
+<yRange min="0.0" max="1.0"/>
+</plot>?>
+        </configure>
+    </entity>
+    <entity name="WalkSignalPlotter" class="ptolemy.actor.lib.gui.SequencePlotter">
+        <property name="_windowProperties" class="ptolemy.actor.gui.WindowPropertiesAttribute" value="{bounds={1271, 684, 1298, 693}, maximized=false}">
+        </property>
+        <property name="_plotSize" class="ptolemy.actor.gui.SizeAttribute" value="[1276, 606]">
+        </property>
+        <property name="_location" class="ptolemy.kernel.util.Location" value="{950.0, 420.0}">
+        </property>
+        <configure>
+<?plotml <!DOCTYPE plot PUBLIC "-//UC Berkeley//DTD PlotML 1//EN"
+"http://ptolemy.eecs.berkeley.edu/xml/dtd/PlotML_1.dtd">
+<plot>
+<title>WalkSignalPlotter</title>
+<xLabel></xLabel>
+<yLabel></yLabel>
+<xRange min="0.0" max="360.0"/>
+<yRange min="0.0" max="1.0"/>
+<default lineStyles="yes"/>
+</plot>?>
+        </configure>
+    </entity>
+    <entity name="CountPlotter" class="ptolemy.actor.lib.gui.SequencePlotter">
+        <property name="_windowProperties" class="ptolemy.actor.gui.WindowPropertiesAttribute" value="{bounds={558, 367, 1298, 693}, maximized=false}">
+        </property>
+        <property name="_plotSize" class="ptolemy.actor.gui.SizeAttribute" value="[1276, 606]">
+        </property>
+        <property name="_location" class="ptolemy.kernel.util.Location" value="{440.0, 330.0}">
+        </property>
+        <configure>
+<?plotml <!DOCTYPE plot PUBLIC "-//UC Berkeley//DTD PlotML 1//EN"
+"http://ptolemy.eecs.berkeley.edu/xml/dtd/PlotML_1.dtd">
+<plot>
+<title>CountPlotter</title>
+<xLabel></xLabel>
+<yLabel></yLabel>
+<xRange min="0.0" max="360.0"/>
+<yRange min="0.0" max="60.0"/>
+</plot>?>
+        </configure>
+    </entity>
+    <relation name="relation4" class="ptolemy.actor.TypedIORelation">
+        <property name="_layoutHint" class="ptolemy.vergil.actor.LayoutHint" value="{ { head={id=&quot;SigGPlotter.input&quot;,x=655.0,y=240.0}, tail={id=&quot;CarLightESMActor.SigG&quot;,x=485.0,y=260.0}, points={} } }">
+        </property>
+    </relation>
+    <relation name="relation6" class="ptolemy.actor.TypedIORelation">
+        <property name="_layoutHint" class="ptolemy.vergil.actor.LayoutHint" value="{ { head={id=&quot;CompositeActor.CarReset&quot;,x=260.0,y=240.0}, tail={id=&quot;CarLightESMActor.reset&quot;,x=485.0,y=260.0}, points={160.0,240.0,160.0,360.0,575.0,360.0,575.0,280.0} } }">
+        </property>
+    </relation>
+    <relation name="relation7" class="ptolemy.actor.TypedIORelation">
+        <property name="_layoutHint" class="ptolemy.vergil.actor.LayoutHint" value="{ { head={id=&quot;SigYPlotter.input&quot;,x=655.0,y=310.0}, tail={id=&quot;CarLightESMActor.SigY&quot;,x=485.0,y=260.0}, points={605.0,310.0,605.0,250.0} } }">
+        </property>
+    </relation>
+    <relation name="relation8" class="ptolemy.actor.TypedIORelation">
+        <vertex name="vertex1" value="{710.0, 350.0}">
+        </vertex>
+        <property name="_layoutHint" class="ptolemy.vergil.actor.LayoutHint" value="{ { head={id=&quot;relation8.vertex1&quot;,x=710.0,y=350.0}, tail={id=&quot;CarLightESMActor.SigR&quot;,x=485.0,y=260.0}, points={590.0,350.0,590.0,270.0} },{ head={id=&quot;SigRPlotter.input&quot;,x=760.0,y=350.0}, tail={id=&quot;relation8.vertex1&quot;,x=710.0,y=350.0}, points={} },{ head={id=&quot;PedestrianLightESM.carSigR&quot;,x=795.0,y=420.0}, tail={id=&quot;relation8.vertex1&quot;,x=710.0,y=350.0}, points={710.0,410.0} } }">
+        </property>
+    </relation>
+    <relation name="relation9" class="ptolemy.actor.TypedIORelation">
+        <property name="_layoutHint" class="ptolemy.vergil.actor.LayoutHint" value="{ { head={id=&quot;WalkSignalPlotter.input&quot;,x=950.0,y=420.0}, tail={id=&quot;PedestrianLightESM.walkSignal&quot;,x=795.0,y=420.0}, points={} } }">
+        </property>
+    </relation>
+    <relation name="relation2" class="ptolemy.actor.TypedIORelation">
+        <vertex name="vertex1" value="{390.0, 330.0}">
+        </vertex>
+        <property name="_layoutHint" class="ptolemy.vergil.actor.LayoutHint" value="{ { head={id=&quot;relation2.vertex1&quot;,x=390.0,y=330.0}, tail={id=&quot;CompositeActor.CarCount&quot;,x=260.0,y=240.0}, points={355.0,330.0,355.0,230.0} },{ head={id=&quot;PedestrianLightESM.count&quot;,x=795.0,y=420.0}, tail={id=&quot;relation2.vertex1&quot;,x=390.0,y=330.0}, points={390.0,430.0} },{ head={id=&quot;CarLightESMActor.count&quot;,x=485.0,y=260.0}, tail={id=&quot;relation2.vertex1&quot;,x=390.0,y=330.0}, points={390.0,270.0} },{ head={id=&quot;CountPlotter.input&quot;,x=440.0,y=330.0}, tail={id=&quot;relation2.vertex1&quot;,x=390.0,y=330.0}, points={} } }">
+        </property>
+    </relation>
+    <relation name="relation" class="ptolemy.actor.TypedIORelation">
+        <property name="_layoutHint" class="ptolemy.vergil.actor.LayoutHint" value="{ { head={id=&quot;CarLightESMActor.pedestrian&quot;,x=485.0,y=260.0}, tail={id=&quot;CompositeActor.Pedestrian&quot;,x=260.0,y=240.0}, points={} } }">
+        </property>
+    </relation>
+    <link port="CarLightESMActor.pedestrian" relation="relation"/>
+    <link port="CarLightESMActor.SigG" relation="relation4"/>
+    <link port="CarLightESMActor.SigY" relation="relation7"/>
+    <link port="CarLightESMActor.SigR" relation="relation8"/>
+    <link port="CarLightESMActor.count" relation="relation2"/>
+    <link port="CarLightESMActor.reset" relation="relation6"/>
+    <link port="PedestrianLightESM.carSigR" relation="relation8"/>
+    <link port="PedestrianLightESM.walkSignal" relation="relation9"/>
+    <link port="PedestrianLightESM.count" relation="relation2"/>
+    <link port="CompositeActor.CarReset" relation="relation6"/>
+    <link port="CompositeActor.CarCount" relation="relation2"/>
+    <link port="CompositeActor.Pedestrian" relation="relation"/>
+    <link port="SigGPlotter.input" relation="relation4"/>
+    <link port="SigRPlotter.input" relation="relation8"/>
+    <link port="SigYPlotter.input" relation="relation7"/>
+    <link port="WalkSignalPlotter.input" relation="relation9"/>
+    <link port="CountPlotter.input" relation="relation2"/>
+</entity>
