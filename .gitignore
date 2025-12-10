@@ -1,1 +1,22 @@
-*.ppt
+# virtual env
+venv/
+env/
+
+# python cache
+__pycache__/
+*.pyc
+
+# raw & processed data
+raw/
+processed/
+
+# logs & outputs
+logs/
+results/
+
+# vscode / pycharm
+.vscode/
+.idea/
+
+# macOS system file
+.DS_Store
