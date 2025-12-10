@@ -8,17 +8,44 @@
 
 评估对象：模型对文本的情感理解能力随长度的变化，也即模型对文本长度在情感能力上的鲁棒性。
 
-数据集：IMDb大型电影评论数据集二次处理后的数据，以四分线与六分线区分为短、长两个文本数据集。
+数据集：IMDb大型电影评论数据集二次处理后的数据，以三分线与七分线区分为短、长两个文本数据集。
 
-评估指标：$Drop=F1_{short}-F1_{long}$
+评估指标：$F1_{short},F1_{long},Drop=F1_{short}-F1_{long}$
 
-评论以考察模型对不同长度输入的鲁棒性与理解能力。评估的对象将分为小模型与LLM，对每组对象评估它们对不同长度的文本理解能力并作出比较。
+模型分组：经典小模型、传统深度模型、预训练模型与LLM。
 
 ## TODO Roadmap
 
-- [ ] 构建基于IMDb Large Movie Review Dataset的长、短Dataset
-- [ ] 决定小模型/大模型组合
-- [ ] 实现训练小模型代码/调用大模型代码
-- [ ] 设定评估指标并实现通用评估代码
-- [ ] 在三个任务上训练、推理小模型并记录Loss曲线与训练耗时
-- [ ] 统计大模型推理速度、推理成本
+### 数据处理
+
+- [x] 下载 IMDb 数据
+- [ ] 清洗文本
+- [ ] 计算每条 review 的长度（按 word 或 token）
+- [ ] 得到 short / long 两个数据集
+- [ ] 保存 processed 数据
+
+### 模型
+
+- [ ] Classic Models: LR, LSVM
+- [ ] Neural Models: BiLSTM, TextCNN
+- [ ] Pretrained Transformers: DistilBERT-base, BERT-base
+- [ ] LLMs: Qwen-7B,Meta Llama 3 8B Instruct
+
+### 评估
+
+- [ ] 实现统一 evaluation 函数（F1）
+- [ ] 分别对 short / long 数据进行评测
+- [ ] 计算 Drop
+- [ ] 记录训练耗时、推理速度
+
+### 可视化
+
+- [ ] $F1_{short} \ vs. \ F1_{long} $柱状图
+- [ ] $Drop$ 柱状图
+- [ ] 错误案例展示
+
+### 文档 & PPT
+
+- [ ] 做 12 分钟 PPT
+- [ ] 写论文大纲
+- [ ] 写论文
