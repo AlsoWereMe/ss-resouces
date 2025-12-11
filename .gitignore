@@ -9,6 +9,7 @@ __pycache__/
 # raw & processed data
 raw/
 processed/
+aclImdb/
 
 # logs & outputs
 logs/
