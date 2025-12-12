@@ -19,10 +19,10 @@
 ### 数据处理
 
 - [x] 下载 IMDb 数据
-- [ ] 清洗文本
-- [ ] 计算每条 review 的长度（按 word 或 token）
-- [ ] 得到 short / long 两个数据集
-- [ ] 保存 processed 数据
+- [x] 清洗文本
+- [x] 计算每条 review 的长度（按 word 或 token）
+- [x] 得到 short / long 两个数据集
+- [x] 保存 processed 数据
 
 ### 模型
 
