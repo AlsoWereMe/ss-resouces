@@ -26,16 +26,16 @@
 
 ### 模型
 
-- [ ] Classic Models: LR, LSVM
+- [x] baseline: TF-IDF + LR/SVM/MNB
 - [ ] Neural Models: BiLSTM, TextCNN
-- [ ] Pretrained Transformers: DistilBERT-base, BERT-base
-- [ ] LLMs: Qwen-7B,Meta Llama 3 8B Instruct
+- [ ] Pretrained Transformers: RoBERTa-base, BERT-base
+- [ ] LLMs: Qwen-7B,Meta Llama3 8B Instruct
 
 ### 评估
 
-- [ ] 实现统一 evaluation 函数（F1）
-- [ ] 分别对 short / long 数据进行评测
-- [ ] 计算 Drop
+- [x] 实现统一 evaluation 函数（F1）
+- [x] 分别对 short / long 数据进行评测
+- [x] 计算 Drop
 - [ ] 记录训练耗时、推理速度
 
 ### 可视化
