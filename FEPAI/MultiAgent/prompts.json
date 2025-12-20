@@ -1,0 +1,27 @@
+[
+    {
+        "subject": "LLM",
+        "prompt": ""
+    },
+    {
+        "subject": "single_agent",
+        "prompt": ""
+    },
+    {
+        "subject": "multi_agent",
+        "agent_list": [
+            {
+                "agent": "Planner",
+                "prompt": ""
+            },
+            {
+                "agent": "Programmer",
+                "prompt": ""
+            },
+            {
+                "agent": "Reviewer",
+                "prompt": ""
+            }
+        ]
+    }
+]

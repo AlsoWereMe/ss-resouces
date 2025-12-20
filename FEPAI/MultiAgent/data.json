@@ -1,0 +1,170 @@
+[
+  {
+    "ProjectID": "PT001",
+    "ProjectName": "Expression Calculator",
+    "Diffculty": "Simple",
+    "InputPrompt": "Develop a calculator program that evaluates mathematical expressions with support for basic arithmetic operations, operator precedence with parentheses, exponentiation, logarithmic functions, absolute value, and factorial. The program should correctly detect and handle invalid expressions and edge cases, without using eval or ast.literal_eval.",
+    "UseCaseLIst": [
+      {
+        "case": "Parse Arithmetic Expressions",
+        "description": "Parse expressions containing addition, subtraction, multiplication, and division."
+      },
+      {
+        "case": "Handle Operator Precedence",
+        "description": "Correctly evaluate expressions with parentheses and operator precedence."
+      },
+      {
+        "case": "Support Advanced Operations",
+        "description": "Support exponentiation, logarithmic operations, absolute value, and factorial."
+      },
+      {
+        "case": "Custom Expression Evaluation",
+        "description": "Evaluate expressions using a custom parsing or evaluation strategy instead of built-in eval functions."
+      },
+      {
+        "case": "Invalid Expression Handling",
+        "description": "Detect and handle malformed expressions and illegal operations gracefully."
+      }
+    ]
+  },
+  {
+    "ProjectID": "PT002",
+    "ProjectName": "Unit Converter",
+    "Diffculty": "Simple",
+    "InputPrompt": "Implement a unit conversion program that supports conversions within length, weight, and temperature categories, including both linear and non-linear conversions. The program should correctly handle unknown units and invalid cross-category conversions.",
+    "UseCaseLIst": [
+      {
+        "case": "Length Unit Conversion",
+        "description": "Convert between common length units using linear scaling."
+      },
+      {
+        "case": "Weight Unit Conversion",
+        "description": "Convert between common weight units using linear scaling."
+      },
+      {
+        "case": "Temperature Conversion",
+        "description": "Support non-linear temperature conversions such as Celsius, Fahrenheit, and Kelvin."
+      },
+      {
+        "case": "Category Validation",
+        "description": "Ensure conversions are only allowed within the same unit category."
+      },
+      {
+        "case": "Unknown Unit Handling",
+        "description": "Gracefully handle unsupported or unknown units."
+      }
+    ]
+  },
+  {
+    "ProjectID": "PT003",
+    "ProjectName": "Reversi Game",
+    "Diffculty": "Medium",
+    "InputPrompt": "Develop a two-player Reversi (Othello) game that supports human-vs-human gameplay on an even-sized board (3 < n < 26). The system should fully implement rule validation, piece flipping, turn management, game state updates, win condition detection, and illegal move handling.",
+    "UseCaseLIst": [
+      {
+        "case": "Board Initialization",
+        "description": "Initialize a valid Reversi board with configurable even dimensions."
+      },
+      {
+        "case": "Move Validation",
+        "description": "Validate whether a move is legal according to Reversi rules."
+      },
+      {
+        "case": "Piece Flipping Logic",
+        "description": "Flip opponent pieces correctly after a valid move."
+      },
+      {
+        "case": "Turn Management",
+        "description": "Alternate turns between two human players."
+      },
+      {
+        "case": "Game End Detection",
+        "description": "Detect game completion and determine the winner."
+      }
+    ]
+  },
+  {
+    "ProjectID": "PT004",
+    "ProjectName": "Fitness Training Record System",
+    "Diffculty": "Medium",
+    "InputPrompt": "Implement an offline fitness training record application that provides a built-in exercise library, supports custom training plan creation, records workout details including exercises, sets, repetitions, weights, and duration, and maintains training history, streaks, and statistical summaries.",
+    "UseCaseLIst": [
+      {
+        "case": "Exercise Library Management",
+        "description": "Provide a built-in exercise library with basic exercise descriptions."
+      },
+      {
+        "case": "Custom Training Plan Creation",
+        "description": "Allow users to create and manage personalized training plans."
+      },
+      {
+        "case": "Workout Session Recording",
+        "description": "Record exercises, sets, repetitions, weights, and duration during workouts."
+      },
+      {
+        "case": "Training History Tracking",
+        "description": "Store and retrieve historical workout records."
+      },
+      {
+        "case": "Streak and Statistics Calculation",
+        "description": "Maintain consecutive training streaks and aggregate statistics."
+      }
+    ]
+  },
+  {
+    "ProjectID": "PT005",
+    "ProjectName": "Diary Journal System",
+    "Diffculty": "Medium",
+    "InputPrompt": "Develop a diary application that allows users to create, edit, and view personal diary entries with rich text formatting, image insertion, keyword search, calendar and list views, daily reminders, and diary export functionality.",
+    "UseCaseLIst": [
+      {
+        "case": "Rich Text Editing",
+        "description": "Support bold, italic, and underline formatting with persistent display."
+      },
+      {
+        "case": "Image Management",
+        "description": "Allow insertion, viewing, and removal of a single image per diary entry."
+      },
+      {
+        "case": "Diary Browsing",
+        "description": "Browse diary entries via chronological list and calendar views."
+      },
+      {
+        "case": "Search Functionality",
+        "description": "Search diary entries using keywords."
+      },
+      {
+        "case": "Reminder and Export",
+        "description": "Support daily reminders and diary export."
+      }
+    ]
+  },
+  {
+    "ProjectID": "PT006",
+    "ProjectName": "Language Learning System",
+    "Diffculty": "Hard",
+    "InputPrompt": "Implement a language learning application that supports personalized study plans, multiple target languages, a lesson tree with progressive unlocking, teaching and exercise phases, health, XP, and coin systems, daily goals, streak tracking, item usage, and independent progress tracking per language.",
+    "UseCaseLIst": [
+      {
+        "case": "Study Plan Initialization",
+        "description": "Allow users to configure target language and daily learning goals."
+      },
+      {
+        "case": "Lesson Tree Progression",
+        "description": "Unlock lessons sequentially using a structured lesson tree."
+      },
+      {
+        "case": "Exercise System",
+        "description": "Support translation, multiple-choice, and fill-in-the-blank exercises using word blocks."
+      },
+      {
+        "case": "Game Mechanics",
+        "description": "Implement health, XP, coins, daily goals, and streak tracking."
+      },
+      {
+        "case": "Multi-Language Progress Tracking",
+        "description": "Maintain independent progress and statistics for each language."
+      }
+    ]
+  }
+]
