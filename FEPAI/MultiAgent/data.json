@@ -1,0 +1,268 @@
+[
+  {
+    "ProjectID": "PT001",
+    "ProjectName": "Expression Calculator",
+    "Diffculty": "Simple",
+    "InputPrompt": "Develop a calculator program that evaluates mathematical expressions with support for basic arithmetic operations, operator precedence with parentheses, exponentiation, logarithmic functions, absolute value, and factorial. The program should correctly detect and handle invalid expressions and edge cases, without using eval or ast.literal_eval.",
+    "UseCaseLIst": [
+      {
+        "case": "Case 1",
+        "description": "The user inputs an arithmetic expression that contains only addition, subtraction, multiplication, and division. The user expects the system to correctly evaluate the expression and return a single numerical result.",
+        "output": "A correct numerical result."
+      },
+      {
+        "case": "Case 2",
+        "description": "The user inputs an expression with multiple levels of parentheses that alter the default operator precedence. The user expects the system to strictly follow parentheses and operator precedence rules during evaluation.",
+        "output": "A numerical result consistent with correct operator precedence."
+      },
+      {
+        "case": "Case 3",
+        "description": "The user inputs an expression that mixes exponentiation and factorial operations together with basic arithmetic. The user expects the system to correctly handle these operations and their priorities according to mathematical definitions.",
+        "output": "A correct numerical result with exponentiation and factorial properly evaluated."
+      },
+      {
+        "case": "Case 4",
+        "description": "The user inputs an expression that includes absolute value operations, where the operand may be a negative number or the result of a sub-expression. The user expects the system to correctly apply absolute value and include it in the overall computation.",
+        "output": "A correct numerical result with absolute value applied correctly."
+      },
+      {
+        "case": "Case 5",
+        "description": "The user inputs an expression that includes logarithmic operations within their valid mathematical domain and combines them with other supported operations. The user expects the system to correctly evaluate the logarithmic terms and return a valid result.",
+        "output": "A correct numerical result with logarithmic operations evaluated within their domain."
+      },
+      {
+        "case": "Case 6",
+        "description": "The user inputs a complex expression that combines multiple supported operations, but contains an invalid sub-expression (such as division by zero, a logarithm applied to a non-positive value, or a syntactically malformed expression). The user expects the system to detect the error instead of returning a misleading numerical result.",
+        "output": "ERROR"
+      }
+    ]
+  },
+  {
+    "ProjectID": "PT002",
+    "ProjectName": "Unit Converter",
+    "Diffculty": "Simple",
+    "InputPrompt": "Implement a unit conversion program that supports conversions within length, weight, and temperature categories, including both linear and non-linear conversions. The program should correctly handle unknown units and invalid cross-category conversions.",
+    "UseCaseLIst": [
+      {
+        "case": "Case 1",
+        "description": "The user requests a conversion between two common length units within the same category (e.g., meters to kilometers). The user expects the system to apply correct linear scaling and return a single converted value.",
+        "output": "A correct converted numerical value in the target length unit."
+      },
+      {
+        "case": "Case 2",
+        "description": "The user requests a conversion between two common weight units within the same category (e.g., kilograms to grams). The user expects the system to apply correct linear scaling and return a single converted value.",
+        "output": "A correct converted numerical value in the target weight unit."
+      },
+      {
+        "case": "Case 3",
+        "description": "The user requests a temperature conversion that requires a non-linear transformation (e.g., Celsius to Fahrenheit, Fahrenheit to Kelvin). The user expects the system to use the correct conversion formula and return a single converted value.",
+        "output": "A correct converted numerical value in the target temperature unit."
+      },
+      {
+        "case": "Case 4",
+        "description": "The user attempts to convert across categories (e.g., meters to kilograms, Celsius to meters). The user expects the system to reject the request rather than produce an arbitrary numerical result.",
+        "output": "ERROR"
+      },
+      {
+        "case": "Case 5",
+        "description": "The user requests a conversion that includes at least one unknown or unsupported unit name. The user expects the system to detect the unknown unit and provide a clear error indication.",
+        "output": "ERROR"
+      },
+      {
+        "case": "Case 6",
+        "description": "The user provides an ill-formed conversion request (e.g., missing units, missing value, or a non-numeric value where a number is required). The user expects the system to handle the invalid request robustly without crashing and return a consistent error indication.",
+        "output": "ERROR"
+      }
+    ]
+  },
+  {
+    "ProjectID": "PT003",
+    "ProjectName": "Reversi Game",
+    "Diffculty": "Medium",
+    "InputPrompt": "Develop a two-player Reversi (Othello) game that supports human-vs-human gameplay on an even-sized board (3 < n < 26). The system should fully implement rule validation, piece flipping, turn management, game state updates, win condition detection, and illegal move handling.",
+    "UseCaseLIst": [
+      {
+        "case": "Case 1",
+        "description": "The user starts a new Reversi game with a valid even-sized board within the allowed range (3 < n < 26). The user expects the board to be initialized correctly with the standard starting configuration and the correct player to move first.",
+        "output": "A correctly initialized board state with a valid starting setup and a clear indication of the current player."
+      },
+      {
+        "case": "Case 2",
+        "description": "A player attempts to place a piece on a position that is legal under Reversi rules (i.e., it brackets at least one opponent piece in at least one direction). The user expects the move to be accepted and the bracketed opponent pieces to be flipped correctly.",
+        "output": "The move is accepted, the board state is updated, and all affected opponent pieces are flipped correctly."
+      },
+      {
+        "case": "Case 3",
+        "description": "A player attempts an illegal move (e.g., placing on an occupied square or placing on an empty square that brackets no opponent pieces). The user expects the system to reject the move and keep the game state unchanged.",
+        "output": "ERROR"
+      },
+      {
+        "case": "Case 4",
+        "description": "After a valid move, the game should switch turns to the other player. The user expects the system to correctly alternate turns and maintain consistent game state across turns.",
+        "output": "The turn alternates to the other player and the updated game state remains consistent."
+      },
+      {
+        "case": "Case 5",
+        "description": "At the start of a player's turn, that player has no legal moves available while the opponent still has at least one legal move. The user expects the system to handle this by skipping the player's turn and allowing the opponent to move, without ending the game prematurely.",
+        "output": "The system correctly detects no available legal moves for the current player and skips the turn to the opponent."
+      },
+      {
+        "case": "Case 6",
+        "description": "The game reaches a terminal condition (e.g., the board is full or neither player has any legal moves). The user expects the system to detect game completion and correctly determine the winner (or a draw) based on the final piece counts.",
+        "output": "The system declares game over and outputs the correct winner (or draw) according to final piece counts."
+      }
+    ]
+  },
+  {
+    "ProjectID": "PT004",
+    "ProjectName": "Fitness Training Record System",
+    "Diffculty": "Medium",
+    "InputPrompt": "Implement an offline fitness training record application that provides a built-in exercise library, supports custom training plan creation, records workout details including exercises, sets, repetitions, weights, and duration, and maintains training history, streaks, and statistical summaries.",
+    "UseCaseLIst": [
+      {
+        "case": "Case 1",
+        "description": "The user opens the app and browses the built-in exercise library to view basic descriptions of available exercises. The user expects the library to be accessible offline and the exercise information to be displayed correctly.",
+        "output": "The built-in exercise library is available offline and exercise descriptions are displayed correctly."
+      },
+      {
+        "case": "Case 2",
+        "description": "The user creates a custom training plan that includes multiple exercises and can later view and modify the plan (e.g., add/remove exercises or reorder them). The user expects the plan changes to persist locally.",
+        "output": "A custom plan can be created, viewed, and updated, and all changes persist locally."
+      },
+      {
+        "case": "Case 3",
+        "description": "During a workout session, the user records detailed workout data for one or more exercises, including sets, repetitions, weights, and total duration. The user expects the session to be saved as a complete workout record.",
+        "output": "A workout session record is saved with the correct exercises, sets, reps, weights, and duration."
+      },
+      {
+        "case": "Case 4",
+        "description": "After multiple workout sessions are recorded on different dates, the user browses the training history. The user expects the system to list past sessions in a consistent chronological order and allow viewing session details.",
+        "output": "Training history is stored and can be retrieved with correct ordering and correct session details."
+      },
+      {
+        "case": "Case 5",
+        "description": "The user trains on consecutive days and the system tracks a training streak. If the user misses a day, the user expects the streak to break/reset without deleting previously recorded workout history.",
+        "output": "Streak tracking is correct: consecutive-day streaks increase, missed days break/reset the streak, and historical records remain intact."
+      },
+      {
+        "case": "Case 6",
+        "description": "The user requests statistical summaries (e.g., total sessions, total training time, per-exercise volume, or weekly aggregates) based on recorded history. The user expects the statistics to be computed consistently and reflect the stored records. If the user attempts an invalid record (e.g., negative weight or negative repetitions), the system should reject it without corrupting statistics.",
+        "output": "Statistical summaries correctly reflect stored records; invalid workout inputs are rejected with a consistent error indication (ERROR) and do not affect stored history or statistics."
+      }
+    ]
+  },
+  {
+    "ProjectID": "PT005",
+    "ProjectName": "Diary Journal System",
+    "Diffculty": "Medium",
+    "InputPrompt": "Develop a diary application that allows users to create, edit, and view personal diary entries with rich text formatting, image insertion, keyword search, calendar and list views, daily reminders, and diary export functionality.",
+    "UseCaseLIst": [
+      {
+        "case": "Case 1",
+        "description": "The user creates a new diary entry, saves it, and later reopens it for viewing. The user expects the content to be persisted correctly and displayed consistently across sessions.",
+        "output": "The entry is saved and can be reopened later with the same content."
+      },
+      {
+        "case": "Case 2",
+        "description": "The user applies rich text formatting (bold, italic, underline) to parts of an entry, saves it, and reopens it. The user expects the formatting to persist and render correctly after saving and reloading.",
+        "output": "Rich text formatting persists after saving and is rendered correctly when viewing the entry."
+      },
+      {
+        "case": "Case 3",
+        "description": "The user inserts a single image into an entry, saves it, and later views the entry. The user expects the image to display correctly. If the user removes the image, the user expects it to be removed without affecting the remaining text content.",
+        "output": "A single image can be inserted and displayed correctly; removing the image updates the entry accordingly without corrupting text content."
+      },
+      {
+        "case": "Case 4",
+        "description": "The user browses diary entries using both a chronological list view and a calendar view. The user expects both views to reflect the same underlying entries and allow consistent navigation to entry details.",
+        "output": "List and calendar views are consistent with stored entries and support correct navigation to entry details."
+      },
+      {
+        "case": "Case 5",
+        "description": "The user searches diary entries using one or more keywords that appear in some entries but not others. The user expects the search results to include all relevant entries and exclude non-matching entries.",
+        "output": "Search returns all and only entries that match the provided keywords."
+      },
+      {
+        "case": "Case 6",
+        "description": "The user enables a daily reminder and expects the system to provide a reminder at the configured time. The user also requests diary export and expects the exported result to include the saved entries and preserve essential content (including rich text and images where applicable).",
+        "output": "Daily reminders trigger as configured; export produces a retrievable diary export that includes saved entries and preserves essential content."
+      }
+    ]
+  },
+  {
+    "ProjectID": "PT006",
+    "ProjectName": "Language Learning System",
+    "Diffculty": "Hard",
+    "InputPrompt": "Implement a language learning application that supports personalized study plans, multiple target languages, a lesson tree with progressive unlocking, teaching and exercise phases, health, XP, and coin systems, daily goals, streak tracking, item usage, and independent progress tracking per language.",
+    "UseCaseLIst": [
+      {
+        "case": "Case 1",
+        "description": "The user initializes a study plan by selecting a target language and configuring a daily learning goal. The user expects the configured settings to be stored and reflected in the learning dashboard.",
+        "output": "The selected target language and daily goal are saved and correctly reflected in the user’s plan/dashboard."
+      },
+      {
+        "case": "Case 2",
+        "description": "The user follows the lesson tree and completes the required prerequisites for a lesson node. The user expects subsequent lessons to unlock progressively according to the lesson tree rules, and locked lessons to remain inaccessible until prerequisites are met.",
+        "output": "Lesson unlocking follows the lesson tree: eligible lessons unlock, ineligible lessons remain locked."
+      },
+      {
+        "case": "Case 3",
+        "description": "For a lesson, the user goes through a teaching phase and then an exercise phase (e.g., translation, multiple-choice, fill-in-the-blank using word blocks). The user expects the system to present exercises correctly and evaluate responses consistently within the lesson flow.",
+        "output": "The system provides a teaching-to-exercise flow, presents supported exercise types, and evaluates user responses consistently."
+      },
+      {
+        "case": "Case 4",
+        "description": "While completing exercises, the user makes mistakes and the system applies health (lives) mechanics. The user expects health to decrease on mistakes, the session to end or block progress when health is depleted (according to the rules), and XP/coin rewards to be granted appropriately based on completion outcomes.",
+        "output": "Health decreases on mistakes and enforces the defined failure constraints; XP and coins are awarded (or withheld) consistently according to completion rules."
+      },
+      {
+        "case": "Case 5",
+        "description": "The user completes the daily goal for several consecutive days and the system tracks a streak. The user then misses the daily goal on a later day. The user expects the streak to increment for consecutive completion and to break/reset on a missed day without losing previously earned progress.",
+        "output": "Daily goal completion updates the streak correctly; a missed day breaks/resets the streak while preserving previously earned progress and history."
+      },
+      {
+        "case": "Case 6",
+        "description": "The user learns two different target languages and makes progress in both. The user expects progress tracking to be independent per language (lesson tree state, XP/coins/health rules, daily goals and streaks, and statistics). The user also uses an in-app item (if available) and expects its effects and consumption to be applied consistently within the correct language context.",
+        "output": "Progress and statistics are isolated per language; item usage applies consistently and only affects the intended language context."
+      }
+    ]
+  },
+  {
+    "ProjectID": "PT007",
+    "ProjectName": "Collaborative Project Management System",
+    "Diffculty": "Hard",
+    "InputPrompt": "Implement a collaborative project management application that supports multiple users working on shared projects. The system should allow project creation, task decomposition with dependencies, role-based permissions, task status tracking, activity logs, and progress visualization. It should handle concurrent updates, ensure consistency of project state, and support error handling for invalid operations.",
+    "UseCaseLIst": [
+      {
+        "case": "Case 1",
+        "description": "A user creates a new project and adds multiple tasks to it. The user expects the project and tasks to be persisted and retrievable, with a clear project overview reflecting the current task list.",
+        "output": "The project is created successfully; tasks are added and can be retrieved, and the project overview reflects the current task list."
+      },
+      {
+        "case": "Case 2",
+        "description": "The user decomposes work into tasks with explicit dependencies (e.g., Task B depends on Task A). The user expects the system to represent dependencies correctly and prevent invalid dependency operations (such as creating circular dependencies).",
+        "output": "Task dependencies are stored and displayed correctly; invalid dependency operations (e.g., cycles) are rejected with a consistent error indication (ERROR)."
+      },
+      {
+        "case": "Case 3",
+        "description": "Multiple users collaborate on the same project with different roles (e.g., viewer, contributor, manager). The user expects role-based permissions to be enforced, such that restricted actions (e.g., deleting tasks or modifying permissions) cannot be performed by unauthorized roles.",
+        "output": "Role-based permissions are enforced consistently; unauthorized actions are rejected with a consistent error indication (ERROR) and do not change the project state."
+      },
+      {
+        "case": "Case 4",
+        "description": "A user updates task status across typical workflow states (e.g., TODO → IN_PROGRESS → DONE). The user expects status changes to update the project state consistently and to be reflected in any progress summary/visualization of the project.",
+        "output": "Task status transitions update the project state correctly and are reflected in progress summaries/visualizations."
+      },
+      {
+        "case": "Case 5",
+        "description": "The system maintains an activity log. When users create tasks, change task status, or update project settings, the user expects the activity log to record these actions in chronological order with sufficient detail to understand what changed.",
+        "output": "An activity log is produced that records relevant actions consistently in chronological order with clear action details."
+      },
+      {
+        "case": "Case 6",
+        "description": "Two users perform near-simultaneous updates that could conflict (e.g., both update the same task status or edit the same task fields). The user expects the system to handle concurrent updates without producing an inconsistent project state, and to provide a clear resolution behavior (e.g., deterministic last-write-wins or explicit conflict rejection).",
+        "output": "Concurrent updates do not lead to an inconsistent project state; the system applies a clear and consistent conflict resolution behavior or returns ERROR for rejected conflicting updates."
+      }
+    ]
+  }
+]
